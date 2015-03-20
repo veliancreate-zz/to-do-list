@@ -54,3 +54,6 @@ Don't worry about deployment, and make sure you read the CONTRIBUTING.md when su
 * Deploy the app
 * Create a persistance layer (e.g. MongoDB), or use LocalStorage or the filesystem through Node
 * Make it look purdy (CSS) - try a framework like Bootstrap or Foundation
+* 
+
+Ready to roll!
