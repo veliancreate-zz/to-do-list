@@ -57,4 +57,3 @@ Don't worry about deployment, and make sure you read the CONTRIBUTING.md when su
 * 
 
 Ready to roll!
->>>>>>> 449a74bbc527f0ebc9eb72eb6f85c9e0c655c561

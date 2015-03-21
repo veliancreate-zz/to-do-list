@@ -1,1 +1,1 @@
-var ToDoListManager = angular.module('ToDoList', ['ngResource']);
+var app = angular.module('ToDoList', ['ngResource']);
