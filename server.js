@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 var morgan = require('morgan');  // log requests to the console (express4)
-var bodyParser = require('body-parser');  // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var mongojs = require('mongojs');
 var db = mongojs('todolist', ['todolist']);
+var bodyParser = require('body-parser');  // pull information from HTML POST (express4)
 
 app.set('views', __dirname + '/public');
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
@@ -24,6 +24,13 @@ app.get('/', function(req, res) {
 
 app.get('/todolist', function(req, res){
   db.todolist.find(function(err, docs){
+    res.json(docs);
+  });
+});
+
+app.post('/todolist', function(req, res){
+  console.log(req.body);
+  db.todolist.insert(req.body, function(err, docs){
     res.json(docs);
   });
 });
