@@ -6,11 +6,7 @@
   </head>
   <body ng-controller="ToDoController">
     <h1>Todo List</h1>
-    <section ng-repeat="item in todolist">
-      <ul>
-        <li>{{ item.content }}<button id="remove-todo" ng-click="remove(todo._id)">Completed!</button></li>
-      </ul>
-    </section>
+
     <table>
       <tr>
         <td>
@@ -18,10 +14,15 @@
         </td>
         <td>
           <button id="add-todo" ng-click="addTodo()">Add Todo</button>
+          <button id="update-todo" ng-click="update()">Update</button>
         </td>
       </tr>
     </table>
-
+    <section ng-repeat="todo in todolist">
+      <ul>
+        <li>{{ todo.content }}<button id="remove-todo" ng-click="remove(todo._id)">Completed!</button><button id="edit-todo" ng-click="edit(todo._id)">Edit</button></li>
+      </ul>
+    </section>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>

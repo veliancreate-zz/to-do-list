@@ -13,8 +13,18 @@ module.exports = function(grunt){
     },
 
     jasmine: {
-      files: 'spec/backSpec.js',
+      files: 'spec/back.spec.js',
     },
+
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        files: ['spec/*.spec.js'],
+        background: true,
+        singleRun: false
+      }
+    },
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
