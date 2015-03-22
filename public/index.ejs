@@ -3,14 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>To Do List</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   </head>
   <body ng-controller="ToDoController">
     <h1>Todo List</h1>
     <section ng-repeat="item in todolist">
-      {{ item.content }}
+      <ul>
+        <li>{{ item.content }}<button ng-click="remove(todo._id)">Completed!</button></li>
+      </ul>
     </section>
-
+    <table>
+      <tr>
+        <td>
+          <input ng-model="todo.content">
+        </td>
+        <td>
+          <button ng-click="addTodo()">Add Todo</button>
+        </td>
+      </tr>
+    </table>
 
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
