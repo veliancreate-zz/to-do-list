@@ -8,9 +8,38 @@ describe('ToDoController', function() {
     ctrl = $controller('ToDoController', { $scope: scope });
   }));
 
-  it('initialises with an empty search result and term', function() {
-    expect(scope.searchResult).toBeUndefined();
-    expect(scope.searchTerm).toBeUndefined();
+  it('initialises with empty todo lists', function() {
+    expect(scope.todo).toBeUndefined();
+    expect(scope.todolist).toBeUndefined();
   });
+
+  describe('when entering a todo', function() {
+
+    var httpBackend;
+    beforeEach(inject(function($httpBackend) {
+      httpBackend = $httpBackend
+      httpBackend
+        .when("GET", "/todolist")
+        .respond(
+        { items: items }
+      );
+    }));
+
+    var items = [
+      {
+        content: "walk dog"  
+      },
+      {
+        content: "take out rubbish"
+      }
+    ];
+
+    it('displays todo lists', function() { 
+      scope.$apply();
+      httpBackend.flush();
+      expect(scope.todolist.items).toEqual(items);
+    });
+
+  });  
 
 });

@@ -18,11 +18,21 @@
         </td>
       </tr>
     </table>
-    <section ng-repeat="todo in todolist">
-      <ul>
-        <li>{{ todo.content }}<button id="remove-todo" ng-click="remove(todo._id)">Completed!</button><button id="edit-todo" ng-click="edit(todo._id)">Edit</button></li>
-      </ul>
-    </section>
+    <main id="list">
+      <table ng-repeat="todo in todolist">
+        <tr>
+          <td class="todo-content">
+            {{ todo.content }}
+          </td>
+          <td>
+            <button class="remove-todo" ng-click="remove(todo._id)">Completed!</button>
+          </td>
+          <td>
+            <button class="edit-todo" ng-click="edit(todo._id)">Edit</button>
+          </td>  
+        </tr>  
+      </table>  
+    </main>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
