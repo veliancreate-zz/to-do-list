@@ -3,7 +3,7 @@ var app = express();
 var morgan = require('morgan');  // log requests to the console (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var mongojs = require('mongojs');
-var db = mongojs(process.env.MONGOLAB_URI, ['todolist']);
+var db = mongojs((process.env.MONGOLAB_URI || 'todolist'), ['todolist']);
 var bodyParser = require('body-parser');  // pull information from HTML POST (express4)
 
 app.set('views', __dirname + '/public');
