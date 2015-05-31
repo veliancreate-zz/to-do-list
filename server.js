@@ -3,7 +3,7 @@ var app = express();
 var morgan = require('morgan');  // log requests to the console (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var mongojs = require('mongojs');
-var db = mongojs((process.env.MONGOLAB_URI || 'todolist'), ['todolist']);
+var db = mongojs('todolist', ['todolist']);
 var bodyParser = require('body-parser');  // pull information from HTML POST (express4)
 
 app.set('views', __dirname + '/public');
@@ -63,9 +63,9 @@ app.put('/todolist/:id', function (req, res) {
   );
 });
 
-var port = process.env.PORT || 3000
-app.listen(port);
-console.log("App listening on port " + port);
+
+app.listen(3000);
+console.log("App listening on port 3000");
 
 
 module.exports = server;

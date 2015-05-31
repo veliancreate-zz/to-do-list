@@ -19,7 +19,7 @@
       </tr>
     </table>
     <main id="list">
-      <table ng-repeat="todo in todolist | orderBy:'content'">
+      <table ng-repeat="todo in todolist">
         <tr>
           <td class="todo-content">
             {{ todo.content }}
@@ -41,4 +41,3 @@
 
   </body>
 </html>
-
