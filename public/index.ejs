@@ -2,42 +2,43 @@
 <html lang="en" ng-app="toDoList">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
     <title>To Do List</title>
   </head>
-  <body ng-controller="ToDoController">
-    <h1>Todo List</h1>
-
-    <table>
-      <tr>
-        <td>
-          <input ng-model="todo.content">
-        </td>
-        <td>
-          <button id="add-todo" ng-click="addTodo()">Add Todo</button>
-          <button id="update-todo" ng-click="update()">Update</button>
-        </td>
-      </tr>
-    </table>
-    <main id="list">
-      <table ng-repeat="todo in todolist">
-        <tr>
-          <td class="todo-content">
-            {{ todo.content }}
-          </td>
-          <td>
-            <button class="remove-todo" ng-click="remove(todo._id)">Completed!</button>
-          </td>
-          <td>
-            <button class="edit-todo" ng-click="edit(todo._id)">Edit</button>
-          </td>  
-        </tr>  
-      </table>  
-    </main>
-
+  <body class="container page-curl shadow-bottom" ng-controller="ToDoController">
+    <div id="page">
+      <img src="images/bananas.png"/>
+      <img src="images/strawberry.png"/>
+      <header class="row">
+        <h1>Todo List</h1>
+        <h2>My first MEAN app</h2>
+      </header>
+      <main>
+        <section class="row clearfix" id="input-todo">
+          <ul class="clearfix">
+            <li><input ng-model="todo.content"></li>
+            <li><button id="add-todo" ng-click="addTodo()">Add Todo</button></li>
+            <li><button id="update-todo" ng-click="update()">Update</button></li>
+          </ul>
+        </section>  
+        <section class="row clearfix" id="list">
+          <ul class="col-xs-12 clearfix" ng-repeat="todo in todolist">
+            <li class="todo-content clearfix">{{ todo.content }}</li>
+            <li>
+              <button class="remove-todo" ng-click="remove(todo._id)">Completed!</button>
+              <button class="edit-todo" ng-click="edit(todo._id)">Edit</button>
+            </li>
+          </ul>  
+        </section>
+      </main>  
+    </div>  
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/appController.js"></script>
-
+    <script src="js/main.js"></script>
   </body>
 </html>

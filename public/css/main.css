@@ -1,0 +1,104 @@
+
+html{
+  background: url('../images/bg.png');
+  color: #000;
+  font-family: 'Rock Salt', cursive;
+  background-size: cover;
+}
+body{
+  background-color: #EDEA85;
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 20px 161px -31px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 20px 161px -31px rgba(0,0,0,0.75);
+  box-shadow: 0px 20px 161px -31px rgba(0,0,0,0.75);
+  position: relative;
+  overflow-y: scroll;
+}
+
+button{
+  font-family: 'Rock Salt', cursive;
+  cursor: pointer;
+}
+
+.container{
+  width: 50%;
+}
+img:first-child{
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+img:nth-child(2){
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+section ul{
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#list ul{
+  width: 90%;
+  margin: 10px auto;
+  float: none;
+}
+
+#list li{
+  width: 50%;
+}
+
+#list li button{
+  background-color: #86BF8B;
+}
+
+input{
+  font-family: 'Rock Salt', cursive;
+}
+
+h1{
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+li{
+  float: left;
+}
+
+button{
+  background-color: #A3CDD4;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#page{
+  text-align: center;
+}
+
+.page-curl:before, .page-curl:after {
+  background: none;
+  bottom: 12px;
+  -moz-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+  content: "";
+  height: 10px;
+  left: 12px;
+  position: absolute;
+  width: 30%;
+  z-index: -99;
+  -moz-transform: skew(-4deg) rotate(-4deg);
+  -webkit-transform: skew(-4deg) rotate(-4deg);
+  transform: skew(-4deg) rotate(-4deg);
+}
+
+.page-curl:after {
+  -moz-transform: skew(4deg) rotate(4deg);
+  -webkit-transform: skew(4deg) rotate(4deg);
+  transform: skew(4deg) rotate(4deg);
+  left: auto;
+  right: 12px;
+}
