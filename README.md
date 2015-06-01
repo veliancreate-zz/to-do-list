@@ -1,9 +1,21 @@
 # Todo Challenge
 
-* Deadline: submit completed pull request by 9am on Monday
-* You may use whatever level of JavaScript you feel comfortable with - pure JS, jQuery, Angular, or whatever weird and wonderful framework you want to try. Extra points for DogeScript
+## Tech used
+
+AngularJS, NodeJS with Express, MongoDB, CSS
+
+## Lessons learned
+
+I was really keen to use a MEAN stack for this challenge, which was very challenging, considering we had not used Mongo in the tutorials during the week. However I was pleased that I was able to provide persistence and got to familiarise myself with using MongoDB with Node.
+
+## Screenshot
+
+![Screenshot](screenshot.png)
 
 ## Challenge
+
+* Deadline: submit completed pull request by 9am on Monday
+* You may use whatever level of JavaScript you feel comfortable with - pure JS, jQuery, Angular, or whatever weird and wonderful framework you want to try. Extra points for DogeScript
 
 ![Todo mockup](https://makersacademy.mybalsamiq.com/mockups/2914603.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
 
