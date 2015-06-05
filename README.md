@@ -6,7 +6,7 @@ AngularJS, NodeJS with Express, MongoDB, CSS
 
 ## Lessons learned
 
-I was really keen to use a MEAN stack for this challenge, which was very challenging, considering we had not used Mongo in the tutorials during the week. However I was pleased that I was able to provide persistence and got to familiarise myself with using MongoDB with Node.
+I was really keen to use a MEAN stack for this challenge, which was very challenging, considering we had not used Mongo in the tutorials during the week. However I was pleased that I was able to provide persistence and got to familiarise myself with using MongoDB with Node. I'd like to implement Angular filters along to filter data on the front-end. TBC!
 
 ## Screenshot
 
